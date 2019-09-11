@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :appointments
   has_many :lessons, through: :appointments
+  has_many :join_table_user_swimming_pools
+  has_many :swimming_pools, through: :join_table_user_swimming_pools
 end
