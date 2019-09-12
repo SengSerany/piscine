@@ -1,4 +1,5 @@
 class ProfilsController < ApplicationController
+  before_action :set_profil, only: [:show, :edit, :update, :destroy]
   def index
   end
 
@@ -18,5 +19,11 @@ class ProfilsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_profil
+    @profil = User.find(params[:id])
   end
 end

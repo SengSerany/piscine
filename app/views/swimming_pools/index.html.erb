@@ -1,2 +1,8 @@
 <h1>SwimmingPools#index</h1>
 <p>Find me in app/views/swimming_pools/index.html.erb</p>
+
+<% if user_signed_in? %>
+
+<%= link_to "Ajouter votre piscine", new_swimming_pool_path %>
+
+<% end %>
