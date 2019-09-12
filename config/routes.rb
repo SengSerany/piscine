@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
- root to: "homes#show"
+ root to: "homes#index"
 
   devise_for :users
 
@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :lessons
   resources :swimming_pools
   resources :profils
-  resources :homes, only: [:show]
+  resources :homes, only: [:index]
   
 end
